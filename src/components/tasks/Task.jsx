@@ -1,11 +1,12 @@
 import React from "react";
+import moment from "moment"
 
-const Task = () => {
+const Task = ({task}) => {
   return (
     <>
       <tr>
-        <th>Learn React</th>
-        <td>30/01/2021</td>
+        <th>{task.task}</th>
+        <td>{ moment(task.date.toDate()).calendar() }</td>
         <td>
           <span className="material-icons"  style={{cursor: "pointer"}}>check_circle</span>
         </td>

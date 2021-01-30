@@ -1,19 +1,20 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import Dashboard from "./components/dashboard/Dashboard";
+import NavBar from "./components/layout/NavBar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <h3 className="text-primary">
-                  Todo App Redux
-        </h3>
-        <Route path="/signin" exact component={SignIn} />
-        <Route path="/signup" exact component={SignUp} />
-        <Route path="/" exact component={Dashboard} />
+        <NavBar />
+        <Switch>
+            <Route path="/signin" exact component={SignIn} />
+            <Route path="/signup" exact component={SignUp} />
+            <Route path="/" exact component={Dashboard} />
+        </Switch>
       </BrowserRouter>
       
     </>

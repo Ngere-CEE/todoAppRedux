@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-class SignIn extends Component {
+class AddTask extends Component {
   state = {
-    email: "",
-    password: "",
+    task: "",
   };
 
   handleChange = (e) => {
@@ -26,28 +25,19 @@ class SignIn extends Component {
         >
           <legend>
             {" "}
-            <h4 className="text-warning">Sign In</h4>
+            <h4 className="text-warning">Add a task</h4>
           </legend>
           <div className="form-group">
-            <label htmlFor="email">Email address</label>
+            <label htmlFor="task">Task:</label>
             <input
-              type="email"
+              type="task"
               className="form-control"
-              id="email"
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              className="form-control"
-              id="password"
+              id="task"
               onChange={this.handleChange}
             />
           </div>
           <button type="submit" className="btn btn-primary">
-            Sign In
+            Save task
           </button>
         </form>
       </>
@@ -55,4 +45,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default AddTask;
